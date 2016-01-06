@@ -13,7 +13,7 @@ cd /usr/local/src
 
 yum install -y wget
 
-wget http://sourceforge.net/projects/nagios/files/nagios-4.x/nagios-4.0.3/nagios-4.0.3rc1.tar.gz
+wget http://sourceforge.net/projects/nagios/files/nagios-4.x/nagios-4.1.1/nagios-4.1.1.tar.gz
 
 wget http://assets.nagios.com/downloads/nagiosplugins/nagios-plugins-1.5.tar.gz
 
@@ -25,7 +25,7 @@ groupadd nagcmd
 
 usermod -a -G nagcmd nagios
 
-tar -xvzf nagios-4.0.3rc1.tar.gz
+tar -xvzf nagios-4.1.1.tar.gz
 tar -xvzf nagios-plugins-1.5.tar.gz
 
 cd nagios
