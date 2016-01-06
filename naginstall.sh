@@ -15,7 +15,8 @@ yum install -y wget
 
 wget http://sourceforge.net/projects/nagios/files/nagios-4.x/nagios-4.1.1/nagios-4.1.1.tar.gz
 
-wget http://assets.nagios.com/downloads/nagiosplugins/nagios-plugins-1.5.tar.gz
+# wget http://assets.nagios.com/downloads/nagiosplugins/nagios-plugins-1.5.tar.gz
+wget http://nagios-plugins.org/download/nagios-plugins-2.0.3.tar.gz
 
 yum install -y httpd php gcc glibc glibc-common gd gd-devel make mysql mysql-devel net-snmp
 
@@ -26,7 +27,7 @@ groupadd nagcmd
 usermod -a -G nagcmd nagios
 
 tar -xvzf nagios-4.1.1.tar.gz
-tar -xvzf nagios-plugins-1.5.tar.gz
+tar -xvzf nagios-plugins-2.0.3.tar.gz
 
 cd nagios
 
@@ -40,7 +41,7 @@ cp -R contrib/eventhandlers/ /usr/local/nagios/libexec/
 chown -R nagios:nagios /usr/local/nagios/libexec/eventhandlers/
 
 cd..
-cd nagios-plugins-1.5
+cd nagios-plugins-2.0.3
 
 ./configure --with-nagios-user=nagios --with-nagios-group=nagios
 
